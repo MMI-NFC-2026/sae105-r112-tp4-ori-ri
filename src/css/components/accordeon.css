@@ -7,6 +7,7 @@
   gap: 30px;
   align-items: flex-start;
 }
+
 .accordeon summary img {
   display: block;
   width: 110px;
@@ -30,13 +31,24 @@ details > summary::-webkit-details-marker {
 details[open] {
   /* ouvert : le texte passe à droite de l'image */
   display: flex;
-  gap: 20px;
 }
 
 details[open] > div {
+  width: 160px;
+  margin-left: 20px;
+  overflow: hidden;
+  animation: ouverture 0.5s ease;
+}
+
+details[open] > div > * {
   width: 160px;
 }
 
 details > div h3 {
   margin-top: 0;
+}
+
+@keyframes ouverture {
+  from { width: 0; margin-left: 0; opacity: 0; }
+  to   { width: 160px; margin-left: 20px; opacity: 1; }
 }
