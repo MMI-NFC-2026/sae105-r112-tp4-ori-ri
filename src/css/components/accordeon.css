@@ -3,15 +3,26 @@
 */
 
 .accordeon {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
 }
 
-details {
+.accordeon > details {
   /* fermé et ouvert */
 }
 
-details[open] {
+.accordeon > details > summary {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.accordeon > details > summary img {
+    display: block;
+    width: 80px;
+}
+
+.accordeon > details[open] {
   /* ouvert */
 }
