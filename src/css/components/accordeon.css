@@ -3,42 +3,40 @@
 */
 
 .accordeon {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+.accordeon summary img {
+  display: block;
+  width: 110px;
+  height: auto;
 }
 
-.accordeon > details {
+details {
   /* fermé et ouvert */
 }
 
-.accordeon > details > summary {
-    display: inline-block;
-    vertical-align: top;
-    cursor: pointer;
+details > summary {
+  list-style: none;
+  cursor: pointer;
 }
 
-.accordeon > details > summary img {
-    display: block;
-    width: 80px;
+details > summary::marker,
+details > summary::-webkit-details-marker {
+  display: none;
 }
 
-.accordeon > details[open] {
-  /* ouvert */
+details[open] {
+  /* ouvert : le texte passe à droite de l'image */
+  display: flex;
+  gap: 20px;
 }
 
-.accordeon > details[open] > div {
-    display: inline-block;
-    vertical-align: top;
-    width: 8rem;
-    margin-left: 1rem;
+details[open] > div {
+  width: 160px;
 }
 
-.accordeon > details[open] > div h3 {
-    margin: 1rem 0 0.5rem;
-    font-size: 1rem;
-}
-
-.accordeon > details[open] > div p {
-    margin: 0;
+details > div h3 {
+  margin-top: 0;
 }
