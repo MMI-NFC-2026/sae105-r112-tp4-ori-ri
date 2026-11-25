@@ -4,8 +4,9 @@
 
 .accordeon {
   display: flex;
-  gap: 30px;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 6px;
+  width: 230px;
 }
 
 .accordeon summary img {
@@ -15,7 +16,9 @@
 }
 
 details {
-  /* fermé et ouvert */
+  background: #eee;
+  border-radius: 6px;
+  padding: 6px;
 }
 
 details > summary {
@@ -29,15 +32,12 @@ details > summary::-webkit-details-marker {
 }
 
 details[open] {
-  /* ouvert : le texte passe à droite de l'image */
-  display: flex;
+  display: block;
 }
 
 details[open] > div {
-  width: 160px;
-  margin-left: 20px;
-  overflow: hidden;
-  animation: ouverture 0.5s ease;
+  width: auto;
+  padding: 8px 6px 4px;
 }
 
 details[open] > div > * {
@@ -46,9 +46,4 @@ details[open] > div > * {
 
 details > div h3 {
   margin-top: 0;
-}
-
-@keyframes ouverture {
-  from { width: 0; margin-left: 0; opacity: 0; }
-  to   { width: 160px; margin-left: 20px; opacity: 1; }
 }
