@@ -26,3 +26,19 @@
 .accordeon > details[open] {
   /* ouvert */
 }
+
+.accordeon > details[open] > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 8rem;
+    margin-left: 1rem;
+}
+
+.accordeon > details[open] > div h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1rem;
+}
+
+.accordeon > details[open] > div p {
+    margin: 0;
+}
